@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { iniDatabase } from "../../config/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -82,7 +82,7 @@ const Login = () => {
             placeholder="password" />
           <button onClick={iniciarSesion} type="button">login</button>
           <p className="message">
-            Not registered? <a href="#">Create an account</a>
+            No tienes cuenta? <Link to="/registro">Crear cuenta</Link>
           </p>
         </form>
       </div>
